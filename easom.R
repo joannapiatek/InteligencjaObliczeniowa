@@ -21,3 +21,11 @@ GA <- ga(type = "real-valued",
          min = c(-12,-12 ), max = c(10, 10), 
          popSize = 100, maxiter = 1000, run = 200)
 summary(GA)
+
+
+easom2 <- function(x1,x2)
+{  
+  
+	
+  return(goTest(fnName="Easom", par=c(x1,x2)))
+}
