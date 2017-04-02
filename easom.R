@@ -1,20 +1,11 @@
 library(GA)
 library(plot3d)
-easom <- function(x1,x2)
-{  
-  
-	
-  fact1 <- -cos(x1)*cos(x2)
-  fact2 <- exp(-(x1-pi)^2-(x2-pi)^2)
-	
-  y <- fact1*fact2
-  return(y)
-}
 
 
-x1 <- x2 <- seq(-30, 30, by = 0.1)
+
+x1 <- x2 <- seq(-10, 10, by = 0.1)
 f <- outer(x1, x2, easom)
-persp3D(x1, x2, f, theta = 50, phi = 20)
+persp3D(x1, x2, f, theta = 50, phi = 10)
 
 GA <- ga(type = "real-valued", 
          fitness =  function(x) -easom(x[1], x[2]),
