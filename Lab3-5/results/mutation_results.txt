@@ -1,0 +1,49 @@
+0.1
+
+> gaResult <- meanGA(population, iteration, crosing, mutant, mini, maxi, elit)
+GA | iter = 50 
+Mean = -6.1835766 | Best = -0.3978987 
+           x1       x2
+[1,] 9.426114 2.477785
+> meanRowsMax <- rowMeans(gaResult$max)
+> meanRowsMean <- rowMeans(gaResult$min)
+> 
+> gaResultCustom <- meanGaCustom(population, iteration, crosing, mutant, mini, maxi, elit)
+GA | iter = 50 
+Mean = -0.3978874 | Best = -0.3978874 
+            x1       x2
+[1,] -3.141553 12.27484
+
+-------------------------
+0.5
+
+> gaResult <- meanGA(population, iteration, crosing, mutant, mini, maxi, elit)
+GA | iter = 50 
+Mean = -23.4151210 | Best =  -0.3999431 
+           x1       x2
+[1,] 3.148731 2.226882
+> meanRowsMax <- rowMeans(gaResult$max)
+> meanRowsMean <- rowMeans(gaResult$min)
+> 
+> gaResultCustom <- meanGaCustom(population, iteration, crosing, mutant, mini, maxi, elit)
+GA | iter = 50 
+Mean = -0.3978874 | Best = -0.3978874 
+           x1    x2
+[1,] 3.141593 2.275
+
+-------------------------
+0.7
+
+> gaResult <- meanGA(population, iteration, crosing, mutant, mini, maxi, elit)
+GA | iter = 50 
+Mean = -44.46762 | Best =  -0.40019 
+           x1       x2
+[1,] 9.430677 2.526193
+> meanRowsMax <- rowMeans(gaResult$max)
+> meanRowsMean <- rowMeans(gaResult$min)
+> 
+> gaResultCustom <- meanGaCustom(population, iteration, crosing, mutant, mini, maxi, elit)
+GA | iter = 50 
+Mean = -0.3978874 | Best = -0.3978874 
+           x1    x2
+[1,] 3.141593 2.275

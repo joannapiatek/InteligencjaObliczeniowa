@@ -1,5 +1,4 @@
-# Implementacja funkcji pozwalaj¹cej na zmianê parametróW
-meanGA <- function(population,iteration,crosing,mutant,mini,maxi,elit)
+meanGaCustom <- function(population,iteration,crosing,mutant,mini,maxi,elit)
 {
   xMax <- matrix ( 0 ,iteration,loopRepetitions)   
   xMean <- matrix ( 0 ,iteration,loopRepetitions)  
@@ -9,6 +8,9 @@ meanGA <- function(population,iteration,crosing,mutant,mini,maxi,elit)
   {  
     GA <- ga(type = "real-valued",
              fitness = function(x) - branin(x[1], x[2]),
+             mutation = myMutation,
+             #selection = mySelection,
+             #crossover = myCrossover,
              min = mini, max = maxi, pcrossover = crosing, pmutation = mutant,
              popSize = population, maxiter = iteration, elitism = elit)
     
@@ -16,5 +18,5 @@ meanGA <- function(population,iteration,crosing,mutant,mini,maxi,elit)
     xMean[,i] <- GA@summary[,2]
     print(GA@solution)
   }
-  return(list(max=xMax,min=xMean))
+  return(list(max=xMax,min=xMean,sol=GA@solution))
 }
