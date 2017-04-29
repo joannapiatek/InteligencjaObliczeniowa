@@ -1,3 +1,4 @@
+--------------------------
 0.1
 
 > gaResult <- meanGA(population, iteration, crosing, mutant, mini, maxi, elit)

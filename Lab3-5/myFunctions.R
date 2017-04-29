@@ -12,12 +12,23 @@ myMutation <- function (ga_object, parent)
 } 
 
 
-mySelection <- function (x,i)
+mySelection <- function (ga_object, parent)
 {
-  selectedNumber <- attributes(x)$elitism
-  selected <- attributes(x)$population[1:selectedNumber,]
-  return(selected)
+  prob <- abs(
+    cos(ga_object@fitness)/(sin(ga_object@fitness))
+  )
+  
+  sel <- sample(1:ga_object@popSize, size = ga_object@popSize, 
+                
+                prob = pmin(prob, 1, na.rm = TRUE),
+                
+                replace = TRUE)
+  
+  out <- list(population = ga_object@population[sel,,drop=FALSE],
+              fitness = ga_object@fitness[sel])
+  return(out)
 }
+
 
 myCrossover <- function (x,i)
 {

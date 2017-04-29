@@ -4,7 +4,8 @@ axis_max <- 10
 # Rysowanie wykresu
 plot(meanRowsMax, 
      type = "p", col="blue", 
-     main = "Porównanie wartoœci œrednich i najlepszych - mutacja domyœlna i w³asna",
+     # main = "Porównanie wartoœci œrednich i najlepszych - mutacja domyœlna i w³asna",
+     main = "Porównanie wartoœci œrednich i najlepszych - selekcja domyœlna i w³asna",
      xlab=" Iteracja", ylab="Wartoœæ funkcji dopasowania"
      ,ylim=c(axis_min,axis_max)
      )
