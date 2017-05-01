@@ -32,10 +32,6 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 
-# images
-*.png
-*.jpg
-*.jpeg
 
 
 ## Latex

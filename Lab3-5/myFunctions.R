@@ -19,9 +19,7 @@ mySelection <- function (ga_object, parent)
   )
   
   sel <- sample(1:ga_object@popSize, size = ga_object@popSize, 
-                
                 prob = pmin(prob, 1, na.rm = TRUE),
-                
                 replace = TRUE)
   
   out <- list(population = ga_object@population[sel,,drop=FALSE],
@@ -30,7 +28,29 @@ mySelection <- function (ga_object, parent)
 }
 
 
-myCrossover <- function (x,i)
+myCrossover <- function (ga_object, parents)
 {
-  return(0)
+  parents <- ga_object@population[parents,,drop = FALSE]
+  parCol <- ncol(parents)
+  parRow <- nrow(parents)
+  children <- parents
+  
+  for (i in 1:parCol)
+  { 
+    for(j in 1:parRow)
+    {
+      if (j == parCol) {  
+        nextCol <- 1 
+      }
+      else {
+        nextCol <- j+1
+      }
+      
+      newChild <- parents[i, j]/2 + parents[i, nextCol]/2
+      children[i, j] <- newChild
+    }
+  }
+  
+  out <- list(children = children, fitness = rep(NA,2))
+  return(out)
 }

@@ -5,7 +5,8 @@ axis_max <- 10
 plot(meanRowsMax, 
      type = "p", col="blue", 
      # main = "Porównanie wartoœci œrednich i najlepszych - mutacja domyœlna i w³asna",
-     main = "Porównanie wartoœci œrednich i najlepszych - selekcja domyœlna i w³asna",
+      main = "Porównanie wartoœci œrednich i najlepszych - selekcja domyœlna i w³asna",
+     # main = "Porównanie wartoœci œrednich i najlepszych - krzy¿owanie domyœlne i w³asne",
      xlab=" Iteracja", ylab="Wartoœæ funkcji dopasowania"
      ,ylim=c(axis_min,axis_max)
      )

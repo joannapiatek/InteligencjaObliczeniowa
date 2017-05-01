@@ -1,6 +1,6 @@
 library(GA)
 
-loopRepetitions <- 15
+loopRepetitions <- 30
 
 
 source("branin.R")
