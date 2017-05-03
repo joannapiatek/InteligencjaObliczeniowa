@@ -5,8 +5,8 @@ axis_max <- 65
 plot(meanRowsMax, 
      type = "p", col="blue", 
      # main = "Porównanie wartoœci œrednich i najlepszych - mutacja domyœlna i w³asna",
-      main = "Porównanie wartoœci œrednich i najlepszych - selekcja domyœlna i w³asna",
-     # main = "Porównanie wartoœci œrednich i najlepszych - krzy¿owanie domyœlne i w³asne",
+     # main = "Porównanie wartoœci œrednich i najlepszych - selekcja domyœlna i w³asna",
+      main = "Porównanie wartoœci œrednich i najlepszych - krzy¿owanie domyœlne i w³asne",
      xlab=" Iteracja", ylab="Wartoœæ funkcji dopasowania"
      ,ylim=c(axis_min,axis_max)
      )
@@ -32,16 +32,16 @@ plot(meanRowsMeanCustom,
      ,ylim=c(axis_min,axis_max)
 )
 
-# legend("bottomright", 
-#        c("Wartoœæ najlepszego osobnika - mutacja domyœlna",
-#          "Œrednia wartoœæ osobników - mutacja domyœlna",
-#          "Wartoœæ najlepszego osobnika - mutacja w³asna",
-#          "Œrednia wartoœæ osobników - mutacja w³asna"
-#          )
-#        ,lty=c(1,1), lwd=c(2.5,2.5)
-#        ,col=c("blue","green", "red", "orange")
-#        ,cex=0.6, y.intersp = 0.3
-#        )
+legend("topright",
+       c("Wartoœæ najlepszego osobnika - krzy¿owanie domyœlne",
+         "Œrednia wartoœæ osobników - krzy¿owanie domyœlne",
+         "Wartoœæ najlepszego osobnika - krzy¿owanie w³asne",
+         "Œrednia wartoœæ osobników - krzy¿owanie w³asne"
+         )
+       ,lty=c(1,1), lwd=c(2.5,2.5)
+       ,col=c("blue","green", "red", "orange")
+       ,cex=1, y.intersp = 0.6
+       )
 
 #axis(1, at = seq(0, 200, by = 2), las=2)
 #axis(2, at = seq(0, 500, by = 1), las=2)
