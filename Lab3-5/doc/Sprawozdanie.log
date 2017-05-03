@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.11)  1 MAY 2017 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.11)  3 MAY 2017 12:03
 entering extended mode
 **./Sprawozdanie.tex
 (Sprawozdanie.tex
@@ -835,7 +835,11 @@ Package: fontenc 2017/01/24 v2.0c Standard LaTeX package
 ("D:\Programy\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2017/01/24 v2.0c Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (Sprawozdanie.aux)
+)) (Sprawozdanie.aux
+
+LaTeX Warning: Label `wyniki_klasyf' multiply defined.
+
+)
 \openout1 = `Sprawozdanie.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -854,8 +858,7 @@ LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
-("D:\Programy\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+ ("D:\Programy\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
 File: ts1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -1093,32 +1096,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
  []
 
 (Mutacja.tex
-Overfull \hbox (97.40796pt too wide) in paragraph at lines 7--18
+Overfull \hbox (56.05pt too wide) in paragraph at lines 7--17
  [][] 
  []
 
-)) [2] (Sprawozdanie.aux) ) 
+) (Selekcja.tex) (Krzyzowanie.tex)) [2] (Sprawozdanie.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13483 strings out of 493333
- 263527 string characters out of 3141349
- 289046 words of memory out of 3000000
+ 13489 strings out of 493333
+ 263600 string characters out of 3141349
+ 291085 words of memory out of 3000000
  16868 multiletter control sequences out of 15000+200000
  22318 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,33p,10425b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\joanp\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\joanp\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\j
-oanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <
-C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm
-1200.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ecbx1728.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecrm1728.pk>
-Output written on Sprawozdanie.pdf (2 pages, 69637 bytes).
+ 39i,8n,33p,10425b,488s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecbx1000.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1200.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\joanp\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\joanp\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\joanp\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Us
+ers\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.
+pk>
+Output written on Sprawozdanie.pdf (2 pages, 76773 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
+ 243 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

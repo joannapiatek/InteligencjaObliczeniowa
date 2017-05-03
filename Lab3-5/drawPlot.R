@@ -1,5 +1,5 @@
-axis_min <- -65
-axis_max <- 10
+axis_min <- -5
+axis_max <- 65
 
 # Rysowanie wykresu
 plot(meanRowsMax, 
