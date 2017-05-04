@@ -1,3 +1,5 @@
+library(GA)
+
 meanGA <- function(population,iteration,crosing,mutant,mini,maxi)
 {
     xMax <- matrix ( 0 ,iteration,5)   

@@ -8,7 +8,7 @@ crosing <- 1
 mutant <- 0.1
 mini <- c(-5,-5)
 maxi <- c(15,15)
-elit <- 6
+elit <- 50
 
 
 gaResult <- meanGA(population, iteration, crosing, mutant, mini, maxi, elit)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.11)  3 MAY 2017 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.11)  4 MAY 2017 23:09
 entering extended mode
 **./Sprawozdanie.tex
 (Sprawozdanie.tex
@@ -843,7 +843,11 @@ Package: fontenc 2017/01/24 v2.0c Standard LaTeX package
 ("D:\Programy\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2017/01/24 v2.0c Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (Sprawozdanie.aux)
+)) (Sprawozdanie.aux
+
+LaTeX Warning: Label `mut_porownanie' multiply defined.
+
+)
 \openout1 = `Sprawozdanie.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -862,8 +866,7 @@ LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
-("D:\Programy\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+ ("D:\Programy\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
 File: ts1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -1100,49 +1103,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-(Mutacja.tex <img/mut_0_1.png, id=9, 1009.52156pt x 506.6428pt>
-File: img/mut_0_1.png Graphic file (type png)
+(Mutacja.tex <img/zad1/mut_0_1.png, id=9, 1009.52156pt x 506.6428pt>
+File: img/zad1/mut_0_1.png Graphic file (type png)
 
-<use img/mut_0_1.png>
-Package pdftex.def Info: img/mut_0_1.png used on input line 12.
+<use img/zad1/mut_0_1.png>
+Package pdftex.def Info: img/zad1/mut_0_1.png used on input line 12.
 (pdftex.def)             Requested size: 504.75955pt x 253.32079pt.
 
 Overfull \hbox (51.68002pt too wide) in paragraph at lines 11--13
  []|  [] 
  []
 
-[2] <img/mut_0_5.png, id=16, 1008.01593pt x 501.37312pt>
-File: img/mut_0_5.png Graphic file (type png)
- <use img/mut_0_5.png>
-Package pdftex.def Info: img/mut_0_5.png used on input line 20.
+[2] <img/zad1/mut_0_5.png, id=16, 1008.01593pt x 501.37312pt>
+File: img/zad1/mut_0_5.png Graphic file (type png)
+
+<use img/zad1/mut_0_5.png>
+Package pdftex.def Info: img/zad1/mut_0_5.png used on input line 20.
 (pdftex.def)             Requested size: 504.00673pt x 250.68594pt.
 
 Overfull \hbox (50.9272pt too wide) in paragraph at lines 19--21
  []|  [] 
  []
 
-[3 <./img/mut_0_1.png>] <img/mut_0_7.png, id=23, 1009.52156pt x 501.37312pt>
-File: img/mut_0_7.png Graphic file (type png)
+[3 <./img/zad1/mut_0_1.png>]
+<img/zad1/mut_0_7.png, id=23, 1009.52156pt x 501.37312pt>
+File: img/zad1/mut_0_7.png Graphic file (type png)
 
-<use img/mut_0_7.png>
-Package pdftex.def Info: img/mut_0_7.png used on input line 28.
+<use img/zad1/mut_0_7.png>
+Package pdftex.def Info: img/zad1/mut_0_7.png used on input line 28.
 (pdftex.def)             Requested size: 504.75955pt x 250.68594pt.
 
 Overfull \hbox (51.68002pt too wide) in paragraph at lines 27--29
  []|  [] 
  []
 
-<img/mut_1.png, id=24, 1006.51031pt x 505.13719pt>
-File: img/mut_1.png Graphic file (type png)
- <use img/mut_1.png>
-Package pdftex.def Info: img/mut_1.png used on input line 36.
+<img/zad1/mut_1.png, id=24, 1006.51031pt x 505.13719pt>
+File: img/zad1/mut_1.png Graphic file (type png)
+
+<use img/zad1/mut_1.png>
+Package pdftex.def Info: img/zad1/mut_1.png used on input line 36.
 (pdftex.def)             Requested size: 503.25392pt x 252.56798pt.
 
 Overfull \hbox (50.1744pt too wide) in paragraph at lines 35--37
  []|  [] 
  []
 
-[4 <./img/mut_0_5.png> <./img/mut_0_7.png>]
+[4 <./img/zad1/mut_0_5.png> <./img/zad1/mut_0_7.png>]
 Overfull \hbox (29.36414pt too wide) in paragraph at lines 50--61
  []|  [] 
  []
@@ -1152,120 +1158,191 @@ Overfull \hbox (29.36414pt too wide) in paragraph at lines 50--61
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 9.
 
-<img/sel_1.png, id=30, 1009.52156pt x 500.62032pt>
-File: img/sel_1.png Graphic file (type png)
- <use img/sel_1.png>
-Package pdftex.def Info: img/sel_1.png used on input line 12.
+<img/zad1/sel_1.png, id=30, 1009.52156pt x 500.62032pt>
+File: img/zad1/sel_1.png Graphic file (type png)
+
+<use img/zad1/sel_1.png>
+Package pdftex.def Info: img/zad1/sel_1.png used on input line 12.
 (pdftex.def)             Requested size: 504.75955pt x 250.30954pt.
 
 Overfull \hbox (51.68002pt too wide) in paragraph at lines 11--13
  []|  [] 
  []
 
-<img/sel_6.png, id=31, 1012.5328pt x 512.66531pt>
-File: img/sel_6.png Graphic file (type png)
- <use img/sel_6.png>
-Package pdftex.def Info: img/sel_6.png used on input line 20.
+<img/zad1/sel_6.png, id=31, 1012.5328pt x 512.66531pt>
+File: img/zad1/sel_6.png Graphic file (type png)
+
+<use img/zad1/sel_6.png>
+Package pdftex.def Info: img/zad1/sel_6.png used on input line 20.
 (pdftex.def)             Requested size: 506.26517pt x 256.33202pt.
 
 Overfull \hbox (53.18564pt too wide) in paragraph at lines 19--21
  []|  [] 
  []
 
-[5 <./img/mut_1.png>]
+[5 <./img/zad1/mut_1.png>]
 Overfull \vbox (58.68375pt too high) has occurred while \output is active []
 
 
-[6 <./img/sel_1.png> <./img/sel_6.png>]
-<img/sel_20.png, id=41, 1008.01593pt x 508.14844pt>
-File: img/sel_20.png Graphic file (type png)
- <use img/sel_20.png>
-Package pdftex.def Info: img/sel_20.png used on input line 28.
+[6 <./img/zad1/sel_1.png> <./img/zad1/sel_6.png>]
+<img/zad1/sel_20.png, id=41, 1008.01593pt x 508.14844pt>
+File: img/zad1/sel_20.png Graphic file (type png)
+
+<use img/zad1/sel_20.png>
+Package pdftex.def Info: img/zad1/sel_20.png used on input line 28.
 (pdftex.def)             Requested size: 504.00673pt x 254.0736pt.
 
 Overfull \hbox (50.9272pt too wide) in paragraph at lines 27--29
  []|  [] 
  []
 
-<img/sel_50.png, id=42, 1007.26312pt x 506.6428pt>
-File: img/sel_50.png Graphic file (type png)
- <use img/sel_50.png>
-Package pdftex.def Info: img/sel_50.png used on input line 36.
+<img/zad1/sel_50.png, id=42, 1007.26312pt x 506.6428pt>
+File: img/zad1/sel_50.png Graphic file (type png)
+
+<use img/zad1/sel_50.png>
+Package pdftex.def Info: img/zad1/sel_50.png used on input line 36.
 (pdftex.def)             Requested size: 503.63033pt x 253.32079pt.
 
 Overfull \hbox (50.5508pt too wide) in paragraph at lines 35--37
  []|  [] 
  []
 
-[7 <./img/sel_20.png> <./img/sel_50.png>]) (Krzyzowanie.tex
-<img/cross_0_2.png, id=49, 1011.02719pt x 508.14844pt>
-File: img/cross_0_2.png Graphic file (type png)
- <use img/cross_0_2.png>
-Package pdftex.def Info: img/cross_0_2.png used on input line 12.
+[7 <./img/zad1/sel_20.png> <./img/zad1/sel_50.png>]) (Krzyzowanie.tex
+<img/zad1/cross_0_2.png, id=49, 1011.02719pt x 508.14844pt>
+File: img/zad1/cross_0_2.png Graphic file (type png)
+
+<use img/zad1/cross_0_2.png>
+Package pdftex.def Info: img/zad1/cross_0_2.png used on input line 12.
 (pdftex.def)             Requested size: 505.51236pt x 254.0736pt.
 
 Overfull \hbox (52.43283pt too wide) in paragraph at lines 11--13
  []|  [] 
  []
 
-<img/cross_0_5.png, id=50, 1014.03844pt x 510.40688pt>
-File: img/cross_0_5.png Graphic file (type png)
- <use img/cross_0_5.png>
-Package pdftex.def Info: img/cross_0_5.png used on input line 21.
+<img/zad1/cross_0_5.png, id=50, 1014.03844pt x 510.40688pt>
+File: img/zad1/cross_0_5.png Graphic file (type png)
+
+<use img/zad1/cross_0_5.png>
+Package pdftex.def Info: img/zad1/cross_0_5.png used on input line 21.
 (pdftex.def)             Requested size: 507.01797pt x 255.2028pt.
 
 Overfull \hbox (53.93845pt too wide) in paragraph at lines 20--22
  []|  [] 
  []
 
-[8 <./img/cross_0_2.png>]
-<img/cross_0_7.png, id=55, 1011.02719pt x 500.62032pt>
-File: img/cross_0_7.png Graphic file (type png)
- <use img/cross_0_7.png>
-Package pdftex.def Info: img/cross_0_7.png used on input line 30.
+[8 <./img/zad1/cross_0_2.png>]
+<img/zad1/cross_0_7.png, id=55, 1011.02719pt x 500.62032pt>
+File: img/zad1/cross_0_7.png Graphic file (type png)
+
+<use img/zad1/cross_0_7.png>
+Package pdftex.def Info: img/zad1/cross_0_7.png used on input line 30.
 (pdftex.def)             Requested size: 505.51236pt x 250.30954pt.
 
 Overfull \hbox (52.43283pt too wide) in paragraph at lines 29--31
  []|  [] 
  []
 
-<img/cross_1.png, id=56, 1007.26312pt x 502.87875pt>
-File: img/cross_1.png Graphic file (type png)
- <use img/cross_1.png>
-Package pdftex.def Info: img/cross_1.png used on input line 39.
+<img/zad1/cross_1.png, id=56, 1007.26312pt x 502.87875pt>
+File: img/zad1/cross_1.png Graphic file (type png)
+
+<use img/zad1/cross_1.png>
+Package pdftex.def Info: img/zad1/cross_1.png used on input line 39.
 (pdftex.def)             Requested size: 503.63033pt x 251.43875pt.
 
 Overfull \hbox (50.5508pt too wide) in paragraph at lines 38--40
  []|  [] 
  []
 
-[9 <./img/cross_0_5.png> <./img/cross_0_7.png>]
+[9 <./img/zad1/cross_0_5.png> <./img/zad1/cross_0_7.png>]
 Overfull \hbox (22.13669pt too wide) in paragraph at lines 51--62
  []|  [] 
  []
 
-)) [10 <./img/cross_1.png>] (Sprawozdanie.aux) ) 
+)) (AlgorytmyHybrydowe.tex
+<img/zad3_mut_max.png, id=62, 1009.52156pt x 502.12593pt>
+File: img/zad3_mut_max.png Graphic file (type png)
+
+<use img/zad3_mut_max.png>
+Package pdftex.def Info: img/zad3_mut_max.png used on input line 8.
+(pdftex.def)             Requested size: 504.75955pt x 251.06235pt.
+
+Overfull \hbox (51.68002pt too wide) in paragraph at lines 7--9
+ []|  [] 
+ []
+
+[10 <./img/zad1/cross_1.png>]
+<img/zad3_mut_mean.png, id=67, 1011.02719pt x 508.90125pt>
+File: img/zad3_mut_mean.png Graphic file (type png)
+
+<use img/zad3_mut_mean.png>
+Package pdftex.def Info: img/zad3_mut_mean.png used on input line 16.
+(pdftex.def)             Requested size: 505.51236pt x 254.45pt.
+
+Overfull \hbox (52.43283pt too wide) in paragraph at lines 15--17
+ []|  [] 
+ []
+
+[11 <./img/zad3_mut_max.png>]
+<img/zad3_sel_max.png, id=72, 1005.7575pt x 511.9125pt>
+File: img/zad3_sel_max.png Graphic file (type png)
+
+<use img/zad3_sel_max.png>
+Package pdftex.def Info: img/zad3_sel_max.png used on input line 24.
+(pdftex.def)             Requested size: 502.87752pt x 255.95563pt.
+
+Overfull \hbox (49.79799pt too wide) in paragraph at lines 23--25
+ []|  [] 
+ []
+
+[12 <./img/zad3_mut_mean.png>]
+<img/zad3_sel_mean.png, id=77, 1014.79124pt x 506.6428pt>
+File: img/zad3_sel_mean.png Graphic file (type png)
+
+<use img/zad3_sel_mean.png>
+Package pdftex.def Info: img/zad3_sel_mean.png used on input line 32.
+(pdftex.def)             Requested size: 507.39438pt x 253.32079pt.
+
+Overfull \hbox (54.31485pt too wide) in paragraph at lines 31--33
+ []|  [] 
+ []
+
+[13 <./img/zad3_sel_max.png>]
+Overfull \hbox (3.69815pt too wide) in paragraph at lines 58--62
+[]\T1/cmr/m/n/10 > ro-und(tail(meanRowsMean, n=1), di-git=6) [1] 36.9159 > ro-u
+nd(tail(meanRowsMax, n=1),
+ []
+
+
+Overfull \hbox (29.36414pt too wide) in paragraph at lines 102--113
+ []|  [] 
+ []
+
+[14 <./img/zad3_sel_mean.png>]) [15] (Sprawozdanie.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13626 strings out of 493333
- 265637 string characters out of 3141349
- 289539 words of memory out of 3000000
- 16987 multiletter control sequences out of 15000+200000
+ 13654 strings out of 493333
+ 266492 string characters out of 3141349
+ 290619 words of memory out of 3000000
+ 17007 multiletter control sequences out of 15000+200000
  22318 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,33p,10425b,500s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\joanp\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\joanp\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\
-joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> 
-<C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
-x1440.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecrm1000.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecrm1200.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on Sprawozdanie.pdf (10 pages, 320551 bytes).
+ <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecbx1000.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1200.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\joanp\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\joanp\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\joanp\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\joanp\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Us
+ers\joanp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.
+pk>
+Output written on Sprawozdanie.pdf (15 pages, 407643 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
+ 345 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
