@@ -1,0 +1,107 @@
+\subsection{Główny kod źródłowy}
+
+Poniższe kody źródłowe zawierają definiowanie używanych funkcji uruchamiających algorytmy genetyczne z pakietu \textit{GA}, a następnie uśredniających wyniki ich działania. Pierwszy fragment zawiera implementację z domyślnymi funkcjami mutacji, selekcji i krzyżowania, natomiast w następnym używane są funkcje autorskie. Na trzecim listingu przedstawione jest finalne wywołanie tych funkcji.\\
+Warto zaznaczyć, że wynikiem optymalizacji są liczby przeciwne do tych, które powinno się otrzymać. Wynika to z następującej linii kodu w wywołaniu algorytmu \textit{GA}:\\
+
+\begin{lstlisting}[linewidth=10.0cm]
+   fitness = function(x) - branin(x[1], x[2])
+\end{lstlisting}
+\vline
+
+- funkcja podawana jest ze znakiem '-'. W celu odwrócenia znaku wyników otrzymane uśrednione wartości mnożymy przez -1, co można zobaczyć w trzecim listingu.\\
+
+\begin{lstlisting}[linewidth=10.0cm]
+   meanRowsMax <- -rowMeans(gaResult$max)
+\end{lstlisting}
+
+
+\newpage
+
+\begin{lstlisting}[linewidth=15.4cm]
+# Implementacja funkcji pozwalajacej na zmiane parametrow
+meanGA <- function(population,iteration,crosing,mutant,mini,maxi,elit)
+{
+   xMax <- matrix ( 0 ,iteration,loopRepetitions)   
+   xMean <- matrix ( 0 ,iteration,loopRepetitions)  
+
+   # Petla do usredniania wynikow
+   for ( i in 1:loopRepetitions )
+   {  
+	GA <- ga(type = "real-valued",
+	fitness = function(x) - branin(x[1], x[2]),
+	min = mini, max = maxi, pcrossover = crosing, pmutation = mutant,
+	popSize = population, maxiter = iteration, elitism = elit)
+	
+	xMax[,i] <- GA@summary[,1]
+	xMean[,i] <- GA@summary[,2]
+	print(GA@solution)
+   }
+   return(list(max=xMax,min=xMean))
+}
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[linewidth=15.4cm]
+# Wersja uzywajaca wlasnych implementacji funkcji (np. mutacji)
+meanGaCustom <- function(population,iteration,crosing,mutant,mini,maxi,elit)
+{
+   xMax <- matrix ( 0 ,iteration,loopRepetitions)   
+   xMean <- matrix ( 0 ,iteration,loopRepetitions)  
+
+   # Petla do usredniania wynikow
+   for ( i in 1:loopRepetitions )
+   {  
+	GA <- ga(type = "real-valued",
+	fitness = function(x) - branin(x[1], x[2]),
+	
+	# Wlasne implementacje funkcji odkomentowywane w miare potrzeb
+	#mutation = myMutation,
+	#selection = mySelection,
+	crossover = myCrossover,
+	
+	min = mini, max = maxi, pcrossover = crosing, pmutation = mutant,
+	popSize = population, maxiter = iteration, elitism = elit)
+	
+	xMax[,i] <- GA@summary[,1]
+	xMean[,i] <- GA@summary[,2]
+	print(GA@solution)
+   }
+   return(list(max=xMax,min=xMean,sol=GA@solution))
+}
+\end{lstlisting}
+
+
+\begin{lstlisting}[linewidth=15.4cm]
+# Ustawienie parametrow
+population <- 100 
+iteration <- 50
+crosing <- 1
+mutant <- 0.1
+mini <- c(-5,-5)
+maxi <- c(15,15)
+elit <- 6
+
+# Finalne wywolanie funkcji domyslnej
+gaResult <- meanGA(population, iteration, crosing, mutant, 
+mini, maxi, elit)
+# Wartosci srednie i najlepsze do wykresow
+meanRowsMax <- -rowMeans(gaResult$max)
+meanRowsMean <- -rowMeans(gaResult$min)
+
+# Finalne wywolanie funkcji z wlasnymi implementacjami 
+gaResultCustom <- meanGaCustom(population, iteration, crosing, mutant, 
+mini, maxi, elit)
+# Wartosci srednie i najlepsze do wykresow
+meanRowsMaxCustom <- -rowMeans(gaResultCustom$max)
+meanRowsMeanCustom <- -rowMeans(gaResultCustom$min)
+
+# Pobranie sredniej wartosci dla ostatnich iteracji - wyniki koncowe
+round(tail(meanRowsMean, n=1), digit=6)
+round(tail(meanRowsMax, n=1),  digit=6)
+round(tail(meanRowsMeanCustom, n=1), digit=6)
+round(tail(meanRowsMaxCustom, n=1), digit=6)
+
+\end{lstlisting}
+
+\newpage

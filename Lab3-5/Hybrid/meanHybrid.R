@@ -1,13 +1,5 @@
 library(GA)
 
-
-# GA <- ga(type = "real-valued",
-#          fitness = function(x) - branin(x[1], x[2]),
-#          min = c(-5.12, -5.12), max = c(5.12, 5.12),
-#          popSize = 50, maxiter = 100,
-#          optim = TRUE)
-# summary(GA)
-
 loopRepetitions <- 30
 
 meanGA <- function(population,iteration,crosing,mutant,mini,maxi,elit)

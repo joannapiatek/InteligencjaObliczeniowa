@@ -27,8 +27,12 @@
 \usepackage{natbib} % Required to change bibliography style to APA
 \usepackage{amsmath} % Required for some math elements 
 \usepackage[margin=1.5in]{geometry}
-
-\usepackage{multirow}
+\usepackage{listings} % Code listings
+\lstset{
+	frame = single, 
+	language=R, 
+	framexleftmargin=2pt}
+\usepackage[colorlinks]{hyperref} % font color
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -83,7 +87,7 @@ Prowadzący: & prof. dr hab. inż. Olgierd Unold % Instructor/supervisor
 %---------------------------------------------------------------------------
 
 \input{./WlasneFunkcje}
-
+\input{./Komiwojazer}
 \input{./AlgorytmyHybrydowe}
 
 \newpage

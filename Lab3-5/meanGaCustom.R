@@ -8,9 +8,9 @@ meanGaCustom <- function(population,iteration,crosing,mutant,mini,maxi,elit)
   {  
     GA <- ga(type = "real-valued",
              fitness = function(x) - branin(x[1], x[2]),
-             #mutation = myMutation,
-             #selection = mySelection,
-             crossover = myCrossover,
+             mutation = myMutation,
+             selection = mySelection,
+             #crossover = myCrossover,
              min = mini, max = maxi, pcrossover = crosing, pmutation = mutant,
              popSize = population, maxiter = iteration, elitism = elit)
     

@@ -1,12 +1,17 @@
-\section{Algorytm genetyczny hybrydowy}
+\section{Algorytm genetyczny hybrydowy (memetyczny)}
 
-\subsubsection{Kod źródłowy}
+\subsection{Wstęp}
+
+Algorytmy memetyczne są pewnym ulepszeniem w stosunku do genetycznych. Stosowane są w nich dodatkowo algorytmy wyszukiwania lokalnego, które powinny zwiększać dokładność otrzymanych wyników.\\
+Jeśli chodzi o implementację, uruchomienie algorytmu hybrydowego z wykorzystaniem pakietu \textit{GA} różni się od zwykłego genetycznego jedynie parametrem \textit{optim} ustawionym na \textit{TRUE}.
+
+\subsubsection{Wyniki badań}
 
 \begin{figure}[H]
 	\centering
 	\hspace*{-0.8in}
 	\includegraphics[scale = 0.5]{zad3_mut_max}
-	\caption{!!!}  
+	\caption{Wartości najlepszych osobników dla różnych prawdopodobieństw mutacji}  
 	\label{rys:zad3_mut_max} 
 \end{figure}
 
@@ -14,100 +19,63 @@
 	\centering
 	\hspace*{-0.8in}
 	\includegraphics[scale = 0.5]{zad3_mut_mean}
-	\caption{!!!}  
+	\caption{Wartości średnie osobników dla różnych prawdopodobieństw mutacji}  
 	\label{rys:zad3_mut_mean} 
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\hspace*{-0.8in}
-	\includegraphics[scale = 0.5]{zad3_sel_max}
-	\caption{!!!}  
+	\includegraphics[scale = 0.49]{zad3_sel_max}
+	\caption{Wartości najlepszych osobników dla różnej ilości osobników elitarnych}  
 	\label{rys:zad3_sel_max} 
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\hspace*{-0.8in}
-	\includegraphics[scale = 0.5]{zad3_sel_mean}
-	\caption{!!!}  
+	\includegraphics[scale = 0.45]{zad3_sel_mean}
+	\caption{Wartości średnie osobników dla różnej ilości osobników elitarnych}  
 	\label{rys:zad3_sel_mean} 
 \end{figure}
 
-\subsubsection{Wyniki badań}
-
-
-1. Wartości domyślne
-
-> round(tail(meanRowsMean, n=1), digit=6)
-[1] 8.811131
-> round(tail(meanRowsMax, n=1),  digit=6)
-[1] 0.398058
-
-
-2. mut = 0.5
-
-> round(tail(meanRowsMean, n=1), digit=6)
-[1] 31.62451
-> round(tail(meanRowsMax, n=1),  digit=6)
-[1] 0.397912
-
-
-3. mut = 0.7
-
-> round(tail(meanRowsMean, n=1), digit=6)
-[1] 36.9159
-> round(tail(meanRowsMax, n=1),  digit=6)
-[1] 0.39793
-
-
-4. mut = 1
-
-> round(tail(meanRowsMean, n=1), digit=6)
-[1] 45.09641
-> round(tail(meanRowsMax, n=1),  digit=6)
-[1] 0.398302
-
----------------------------------
-
-1.sel=1
-
-> round(tail(meanRowsMean, n=1), digit=6)
-[1] 15.28275
-> round(tail(meanRowsMax, n=1),  digit=6)
-[1] 0.398001
-
-2.sel=20
-
-> round(tail(meanRowsMean, n=1), digit=6)
-[1] 5.619913
-> round(tail(meanRowsMax, n=1),  digit=6)
-[1] 0.397887
-
-3.sel=50
-
-> round(tail(meanRowsMean, n=1), digit=6)
-[1] 2.657782
-> round(tail(meanRowsMax, n=1),  digit=6)
-[1] 0.397887
-
+\vline
 
 \subsubsection{Wnioski}
 
 \begin{table}[!h]
 	\hspace*{-1.5in}
 	\centering
-	\caption{Wartości średnie i najlepsze osobnika dla domyślnej i własnej funkcji mutacji}
-	\label{mut_porownanie}
+	\caption{Wartości średnie i najlepsze osobnika dla różnych prawdopodobieństw mutacji}
+	\label{mut_alg_hyb}
 	\hspace*{-0.4in}
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		\textbf{Prawdopodobieństwo} & \multicolumn{2}{c}{\textbf{Mutacja domyślna}}  & \multicolumn{2}{|c|}{\textbf{Mutacja własna}} \\ \cline{2-5}
-		\textbf{mutacji} & Wartość średnia & Najlepszy wynik & Wartość średnia & Najlepszy wynik \\ \hline
+		\textbf{Prawdopodobieństwo mutacji} & \textbf{Wartość średnia} & \textbf{Najlepszy wynik} \\ \hline
 		
-		0.1 & 5.753710  & 0.398006 & 0.398736 & 0.398687 \\
-		0.5 & 31.029570 & 0.401904 & 0.415733 & 0.398201 \\
-		0.7 & 38.184020 & 0.404532 & 0.567679 & 0.398926 \\
-		1   & 46.920430 & 0.408154 & 0.452637 & 0.400847  \\ \hline      
+		0.1 & 8.811131 & 0.398058 \\
+		0.5 & 31.624510 & \textbf{{\color{green} 0.397912 }} \\
+		0.7 & 36.915900 & 0.397930 \\
+		1   & 45.09641 & 0.398302 \\ \hline      
 	\end{tabular}
 \end{table}
+
+
+\begin{table}[!h]
+	\hspace*{-1.5in}
+	\centering
+	\caption{Wartości średnie i najlepsze osobnika dla różnych ilości osobników elitarnych}
+	\label{sel_alg_hyb}
+	\hspace*{-0.4in}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{Liczba osobników elitarnych} & \textbf{Wartość średnia} & \textbf{Najlepszy wynik} \\ \hline
+		
+		6  & 8.811131 & 0.398058 \\
+		1  & 15.28275 & 0.398001 \\
+		20 & 5.619913 & \textbf{{\color{green} 0.397887}} \\
+		50 & 2.657782 & \textbf{{\color{green} 0.397887}} \\ \hline      
+	\end{tabular}
+\end{table}
+
+W przypadku selekcji elitarnej udało się uzyskać rezultat identyczny (z dokładnością \mbox{do 0.000 001)} z podanym w dokumentacji minimum lokalnym funkcji \textit{branin}. Tym samym zostały potwierdzone założenia teoretyczne, jakoby algorytm hybrydowy miał polepszyć wyszukiwanie lokalnego extremum.

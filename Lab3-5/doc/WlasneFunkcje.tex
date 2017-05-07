@@ -1,5 +1,7 @@
 \section{Własne funkcje mutacji, krzyżowania i selekcji}
 
+
+\subsection{Wstęp}
 Zadanie polegało na zastąpieniu domyślnych funkcji używanych w pakiecie GA na własne implementacje i porównanie ich działania. Podstawowe zestawienie składa się z najlepszych oraz średnich wyników dla danej populacji w przypadku użycia funkcji wbudowanej oraz własnej. Podczas badań zmieniane są parametry dotyczące badanej funkcji, natomiast pozostałe przyjmują wartości domyślne podane poniżej.\\
 
 Wartości domyślne funkcji użytych w badaniach to kolejno:\\
@@ -13,8 +15,47 @@ Selekcja elitarnych jednostek – 6\\
 Wyniki wszystkich badań to rezultaty uśrednione po 30 przebiegach.\\
 \newline
 
-Do badań została wykorzystana funkcja wielomodalna \textit{branin}.
+\subsection{Funkcja \textit{branin}}
+Do badań została wykorzystana funkcja wielomodalna \textit{branin}.\\
 
+Wzór funkcji \textit{branin}:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 1]{branin_formula} 
+	\label{rys:branin_formula} 
+\end{figure}
+
+Minimum globalne:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 1]{branin_minimum}
+	\label{rys:branin_minimum} 
+\end{figure}
+
+Poniżej przedstawiono kod źródłowy importujący funkcję \textit{branin} z pakietu \textit{globalOptTests}.\\
+
+\begin{lstlisting}[frame=single]
+library(globalOptTests)
+
+branin <- function(x1,x2)
+{
+   return(goTest(fnName="Branin", par=c(x1,x2)))
+}
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 1]{branin_plot}
+	\caption{Wykres funkcji \textit{branin}}  
+	\label{rys:branin_plot} 
+\end{figure}
+
+\vline
+
+\input{./OgolnyKod1}
 \input{./Mutacja}
 \input{./Selekcja}
 \input{./Krzyzowanie}
+\input{./DwaParametry}
+
+\newpage
