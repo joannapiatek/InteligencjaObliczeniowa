@@ -6,13 +6,15 @@ covX = cov(X');
 [V, D] = eigs(covX,J);
 Z = V'*X;
 
+V_ort = calc_ortogonal_endpoint([0, V(1,1)], [1, V(1,2)]);
+
 
 clf;
 plot(X(1, :), (X(2, :)), '*');
 hold on;
 plot(Z(1, :), (Z(2, :)), '*');
 hold on;
-plot(V(1,:))
+plot([0,1],V(1,:))
 hold on;
-plot(V(:,1))
+plot([0 V_ort(1)], [V(1,1) V_ort(2)])
 
