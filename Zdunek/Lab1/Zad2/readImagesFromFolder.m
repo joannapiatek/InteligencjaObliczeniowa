@@ -1,4 +1,4 @@
-function arrays = read_images(folder_name)
+function arrays = readImagesFromFolder(folder_name)
 
     arrays = [];
     photos_count = 10;

@@ -1,3 +1,4 @@
-arrays1 = read_images('s1/');
+images_arrays = getAllImages();
 
-[V, newArrays1, D] = myPCA(arrays1, 4);
+J = [4, 10, 20, 30];
+[groups, groups_pca] = groupImages(images_arrays, J(1));
