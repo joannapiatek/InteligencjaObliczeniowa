@@ -1,28 +1,42 @@
 function plotResultsComparision()
 
-
-%% Rodzaje porownan:
-% - dla tego samego classes_count (wynik grupowania i klasyfikacji): 
-%       zaleznosc skutecznosci od J, 
-%       zaleznosc czasu od J
-%
-
+%% Initialization
 J = [4, 10, 20, 30];
 
 min_classes_count = 2;
 max_classes_count = 5;
+grouping_acc = [];
+grouping_pca_acc = [];
+grouping_time = [];
+grouping_pca_time = [];
+class_acc = [];
+class_pca_acc = [];
+class_time = [];
+class_pca_time = [];
+
+%% Porownanie: dla tego samego classes_count (wynik grupowania i klasyfikacji): 
+% - zaleznosc skutecznosci od J, 
+% - zaleznosc czasu od J
 
 for classes_count = min_classes_count : max_classes_count
     for j_idx = 1 : 4
-        %% Moze tu juz zrobic osobna funkcje?
-        group_filename = strcat('grouping_j_', int2str(J(j_idx)), '_gr_', int2str(classes_count), '.mat');
-        class_filename = strcat('classification_j_', int2str(J(j_idx)), '_gr_', int2str(classes_count), '.mat');
-        load(group_filename);
-        load(class_filename);
-        %% Usrednianie wynikow - osobna funkcja
         
-        %% Dodawanie do wykresu i hold on
+        grouping_results = loadAverageResults('grouping_j_', J(j_idx), classes_count);
+        grouping_acc(j_idx) = grouping_results(1);
+        grouping_pca_acc(j_idx) = grouping_results(2);
+        grouping_time(j_idx) = grouping_results(3);
+        grouping_pca_time(j_idx) = grouping_results(4);
+        
+        class_results = loadAverageResults('classification_j_', J(j_idx), classes_count);
+        class_acc(j_idx) = class_results(1);
+        class_pca_acc(j_idx) = class_results(2);
+        class_time(j_idx) = class_results(3);
+        class_pca_time(j_idx) = class_results(4);        
     end
     
-    %% Zapis wykresu do pliku
+    %% Wykresy
+    % Porownanie skutecznosci
+    % compareAccForClassesCount
+    % Porownanie czasu trwania
+    % compareTimeForClassesCount
 end
