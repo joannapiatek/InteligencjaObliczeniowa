@@ -1,0 +1,1 @@
+Dt = Y4*pinv(double(G4)*kron(Br,Ar)))
