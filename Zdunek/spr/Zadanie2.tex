@@ -2,6 +2,19 @@
 
 \subsection{Implementacja główna}
 
+Na poniższym listingu została przedstawiona główna pętla programu. Podczas jej działania zostają wykonane następujące operacje:
+\begin{itemize}
+	\item Wczytanie wybranej ilości folderów ze zdjęciami,
+	\item Utworzenie wzorcowego wektora, zawierającego klasy kolejnych obrazów (klasa - numer osoby, której zrobiono zdjęcie), 
+	\item Dla każdej z wskazanych wartości estymowanych komponentów głównych (J) zostaje przeprowadzone zredukowanie wymiarów za pomocą funkcji \textit{myPCA},
+	\item Zdjęcia oryginalne oraz zredukowane zostają poddane grupowaniu i klasyfikacji,
+	\item Zapis skuteczności i czasu działania algorytmów do plików.
+\end{itemize}
+
+Pętla ta jest wykonywana dla różnej liczby klas (grup) zdjęć, w zależności od zmiennej \textit{classes\_count}.
+
+\vspace{5mm}
+
 \begin{lstlisting}[linewidth=16.0cm][caption={[Skrypt main, wykonujący kod główny]}]
 classes_count = 5;
 % Wczytywanie zdjec dla wybranej liczy klas
@@ -43,6 +56,12 @@ for j_val = 1:4
 end
 \end{lstlisting}
 
+\vspace{5mm}
+
+W celu redukcji wymiarów za pomocą algorytmu PCA, została zaimplementowana funkcja \textit{myPCA}, którą przedstawiono poniżej.
+
+\vspace{5mm}
+
 \begin{lstlisting}[linewidth=16.0cm]
 function [V, newX, D] = myPCA(X, J)
 	X = bsxfun(@minus, X, mean(X,2));
@@ -57,6 +76,10 @@ end
 
 
 \subsection{Implementacja grupowania}
+
+Pierwszym krokiem do rozwiązania zadania było pogrupowanie zdjęć z użyciem algorytmu k-średnich. W tym celu powstała funkcja \textit{getGroupingResults}. 
+
+\vspace{5mm} 
 
 \begin{lstlisting}[linewidth=16.0cm]
 function result = getGroupingResults(images_arrays, pca_images_arrays, 
@@ -79,7 +102,23 @@ function result = getGroupingResults(images_arrays, pca_images_arrays,
 end
 \end{lstlisting}
 
+\vspace{5mm} 
+
+Jak można zauważyć na powyższym listingu, funkcja przyjmuje 4 argumenty:
+\begin{itemize}
+	\item \textit{images\_arrays} - oryginalne macierze zdjęć,
+	\item \textit{pca\_images\_arrays} - macierze zdjęc po redukcji wymiarów,
+	\item \textit{clusters} - ilość klastrów (grup) zdjęć,
+	\item \textit{images\_classes} - wzorzec klas dla kolejnych zdjęć.
+\end{itemize}
+Podczas wykonywania funkcji mierzony jest czas grupowania, a następnie, za pomocą funkcji \textit{AccMeasure}, także jej skuteczność. Numery klas przyporządkowanych kolejnym obrazom w wyniku grupowania k-średnich nie zawsze są tożsame z tymi, które zostały podane jako wzorcowe. Jednak \textit{AccMeasure} radzi sobie z przyporządkowaniem klas założonych klasom otrzymanym ze skutecznością ponad 80\%. Można to sprawdzić, uruchamiając ją w ten sposób, by zwracała trzy wartości - jedna z nich przedstawia właśnie tą skuteczność. Wyniki otrzymane za pomocą tej funkcji należy znormalizować tak, by największa możliwa ich wartość była równa 1. Wtedy można łatwo porównać je z wynikami klasyfikacji.\\
+Ostatecznie otrzymujemy skuteczność i czas grupowań zdjęć oryginalnych i tych po redukcji wymiarów.
+
 \subsection{Implementacja klasyfikacji}
+
+Kolejnym elementem implementacji jest klasyfikacja obrazów za pomocą algorytmu k najbliższych sąsiadów. W tym celu została stworzona funkcja \textit{getClassificationResults}. Przyjmuje ona te same argumenty, co funkcja używana przy grupowaniu, jednak dla lepszego zrozumienia działania kodu zmiennej \textit{clusters} z poprzedniego listingu odpowiada \textit{classes\_count} z obecnego.
+
+\vspace{5mm} 
 
 \begin{lstlisting}[linewidth=16.0cm]
 function result = getClassificationResults(images_arrays, pca_images_arrays,
@@ -105,11 +144,10 @@ function result = getClassificationResults(images_arrays, pca_images_arrays,
 	result = [default_acc, pca_acc, default_time, pca_time];
 \end{lstlisting}
 
+\vspace{5mm} 
 
+Najpierw, na podstawie macierzy obrazów i wzorca ich klas, za pomocą algorytmu k-NN, tworzony jest model klasyfikatora. Następnie, z wykorzystanie fukcji \textit{crossval}, przeprowadzona zostaje kroswalidacja, czyli analiza modelu, polegająca na wybraniu przez algorytm różnych elementów zbioru jako zestaw uczący, a jednego jako testowy. Taki sprawdzian zostaje przeprowadzony dla wielu kombinacji elementów w grupach. Ostatnim krokiem jest sprawdzenie błędu modelu za pomocą funkcji \textit{kfoldLoss}. Odejmując wynik od liczby 1 otrzymujemy skuteczność klasyfikacji w modelu. 
 
-\begin{lstlisting}[linewidth=16.0cm]
-
-\end{lstlisting}
 
 \subsection{Wyniki}
 
