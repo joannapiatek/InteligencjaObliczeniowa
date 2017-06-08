@@ -26,21 +26,20 @@ for k = 1: MaxIter
     A = A*(diag(1./sum(A, 1)));
     
     X = max(0, inv(A'*A)*A'*Y);
+    
     % ^^ rozwiazania najmniejszych kwadratow, trzeba zrobic poprawke    
-    % blad residualny??
+    % Blad residualny
     res(k) = norm(Y - A*X, 'fro')/norm(Y, 'fro');
 end
-plot(res)
+semilogy(res)
 
-% CalcSIR sciagnac
-% CalcSIR(Aw, A)
+CalcSIR(Aw, A)
 % Jak wychodzi ponad 200 to jest spoko
-
 Aws = Aw*diag(1./sum(Aw, 1));
 As = A*diag(1./sum(A, 1));
 % Jak porownamy Aws i As to maj¹ te same kolumny, ale czasem w innej
 % kolejnosci
-
+CalcSIR(Aws, As)
 
 %% Jeszcze do zrobienia: jakosc estymacji - MSE
 
