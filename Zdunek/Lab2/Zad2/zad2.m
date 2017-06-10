@@ -32,4 +32,5 @@ end
 
 size(Y)
 
+test = ntimes(U1w, U2w, 2, 2)
 %% ALS
