@@ -1,4 +1,4 @@
-function product = ntimes(X,Y,modeX,modeY);
+function product = ntimes(X,Y,modeX,modeY)
 
 
 %NTIMES Array multiplication

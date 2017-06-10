@@ -11,26 +11,15 @@ U1w = max(0, randn(I1, J));
 U2w = max(0, randn(I2, J));
 U3w = max(0, randn(I3, J));
 
-%% Syntetyczne obserwacje Y - do sprawdzenia
-% Operacje z petli maja sie zsumowac na zasadzie superpozycji
-Y = [];
-
-U12w = U1w*U2w';
-for i = 1:I3
-    Y(:, :, i) = U12w*U3w(i);
+%% Syntetyczne obserwacje Y 
+I = zeros(J,J,J);
+for i = 1 : J
+    I(i,i,i) = 1;   
 end
 
-U13w = U1w*U3w';
-for i = 1:I2
-    Y(:, i, :) = U13w*U2w(i);
-end
-
-U23w = U2w*U3w';
-for i = 1:I1
-    Y(i, :, :) = U23w*U1w(i);
-end
+Y = ntimes(ntimes(ntimes(I, U1w, 1, 2), U2w, 1, 2), U3w, 1, 2);
 
 size(Y)
 
-test = ntimes(U1w, U2w, 2, 2)
-%% ALS
+%% ALS 
+% ntimes(U1w, U2w', 1, 2)
