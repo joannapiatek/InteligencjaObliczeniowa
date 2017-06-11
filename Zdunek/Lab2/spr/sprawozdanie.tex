@@ -1,0 +1,92 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.1 (25/3/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{float}
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[margin=1.5in]{geometry}
+
+\usepackage{multirow}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%ustawienie jezyka polskiego
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+\graphicspath{ {img/} }
+
+\usepackage{listings}             % Include the listings-package
+\lstset{
+	frame = single, 
+	language=Matlab, 
+	framexleftmargin=2pt} 
+
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Inteligencja obliczeniowa i jej zastosowania\\
+	\vspace{5mm}
+	\textbf{Laboratorum cz. IV, nr 3-4}} % Title
+
+\author{\\
+	\\Autorzy:
+	\\Joanna Piątek, nr indeksu: 199966
+	\\Agnieszka Wątrucka, nr indeksu: 200016
+	\\Grupa: Środa, 15:15} % Author name
+\date{Data oddania: 12.06.2016}
+
+%%\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+\begin{tabular}{l r}
+Prowadzący: & prof. dr hab. inż. Rafał Zdunek % Instructor/supervisor
+\end{tabular}
+\end{center}
+ 
+\newpage
+\newpage
+
+%---------------------------------------------------------------------------
+
+\newpage
+\input{./Zadanie2}
+
+
+\end{document}
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
