@@ -2,7 +2,7 @@
 %% Inicjalizacja
 A_mue = rand(size(Y,1), J);
 X_mue = rand(J, size(Y,2));
-eps = 0.0000000001
+eps = 0.0000000001;
 %%B_x = A_mue'*Y;
 %%C_x = A_mue'*(A_mue*X_mue);
 %%D_a= Y*X_mue';

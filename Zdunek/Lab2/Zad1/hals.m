@@ -28,5 +28,3 @@ for k = 1: MaxIter
    % Blad residualny
    res_hals(k) = norm(Y - A_hals*X_hals, 'fro')/norm(Y, 'fro');
 end
-
-semilogy(res_hals)
